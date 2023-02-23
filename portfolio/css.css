@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Varela+Round&display=swap');
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    align-items: center;
+    padding: 10px 200px;
+}
+.logo{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #3a6cf4;
+
+}
+header nav a{
+    text-decoration: none;
+    padding-left: 20px;
+    text-transform: capitalize;
+    color: #3a6cf4;
+    font-weight: 500px;
+    font-size: 1.1em;
+
+}
+header nav a:hover{
+    color: #601cfc;
+}
+
+.main{
+
+   padding: 100px 200px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: url(imag/image6.jpg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main h2{
+    font-weight: 500px;
+    font-size: 1.3em;
+    color: #fff;
+
+}
+.main .color{
+    color: #4e9eff;
+    font-size: 2.5em;
+    margin: 10px 0px;
+}
+.main h3{
+    font-weight: 500px;
+    font-size: 2em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.main_buton{
+    background-color: #3a6cf4;
+    text-decoration: none;
+    padding: 7px 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 20px 0px;
+    color: #fff;
+    letter-spacing: 1px;
+
+    text-transform: capitalize;
+    transition: .4s;
+    
+}
+.main_buton:hover{
+    transform: scale(1.1);
+    background-color: #0f4bf1;
+
+}.icon a{
+    color: #fff;
+    font-size: 1.3em;
+    padding-right: 20px;
+}
+.services .ser{
+    text-align: center;
+    margin: 60px 0px 40px;
+    color: #0f4bf1;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+.services .contant{
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+
+    text-align: center;
+    flex-wrap: wrap;
+}
+.services .contant div{
+    width:350px;
+    background-color: hsl(0, 0%, 100%);
+    margin-right: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+    padding: 50px;
+    transition: 0.5s ease;
+    border-radius: 10px;
+}
+.services .contant h3{
+    color: #0f4bf1;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.services .contant i{
+    color: #0f4bf1;
+    font-size: 4em;
+    font-weight: 900px;
+    margin-bottom: 20px;
+}
+
+.services .contant p{
+    letter-spacing: 1px ;
+    line-height: 23px;
+    text-transform: capitalize;
+}
+.services .contant div:hover{
+    transform: scale(1.1);
+}
+.black{
+    background-color: #000;
+    padding-top: 50px;
+    margin-top: 50px;
+}
+.pro{
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+    
+    
+}
+.pro div{
+    width:302px;
+    background-color: hsl(0, 0%, 100%);
+    margin-right: 30px;
+    margin-bottom: 20px;
+    transition: 0.5s ease;
+    border-radius: 10px;
+    border: 1px solid white;
+
+
+}
+.pro div img{
+    width: 300px;
+    height: 200px;
+    object-fit:fill;
+
+    border-radius: 11px;
+}
+.pro div div{
+    display: flex;
+    justify-content: space-between;
+    width: 296px;
+    align-items: center;
+    padding:  20px 0px;
+    text-transform: uppercase;
+
+   padding: 10px;
+}
+.pro a{
+
+    text-decoration: none;
+    color: #0f4bf1;
+}
+.pro div p{
+    letter-spacing: 1px;
+font-size: 14px;
+padding: 10px 0px 0px 10px;
+}
+.services .pro .scal:hover{
+    transform: scale(1.1);
+}
+footer{
+    padding: 20px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 20px;
+}
+
+footer span {
+    color: #0f4bf1;
+}
