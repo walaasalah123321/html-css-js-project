@@ -32,14 +32,14 @@ item.addEventListener('click',function(){
     value=item.innerHTML;
     if(value=="All Department"){
         filter.forEach(item=>{
-        newdiv+=`<div class="col-lg-3 col-md-6 col-xm-12 par">
+        newdiv+=`<div class="col-lg-3 par">
         ${item.innerHTML}
         </div>`
         })
     }
     filter.forEach(item=>{
                 if(item.classList.contains(value)){
-            newdiv+=`<div class="col-lg-3 col-md-6 col-xm-12 ${value} par">
+            newdiv+=`<div class="col-lg-3  ${value} par">
              ${item.innerHTML}
              </div>
              `
