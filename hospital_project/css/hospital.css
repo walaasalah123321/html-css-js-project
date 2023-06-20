@@ -1,0 +1,240 @@
+:root{
+    --dark-color:#0d6efd;
+    --green-color:#33d1cc;
+    --red-color:#ff3150;
+    --yellow-color:#ffc400;
+    --section-color:#eff7fa;
+}
+
+
+
+:root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding: 100px;
+    --main-background: #ececec;
+  }
+
+.navbar{
+   width: 80%;
+   margin: auto;
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+    
+}
+.navbar img {
+    width: 150px ;
+    cursor: pointer;
+}
+.button svg{
+    color: #000;
+}
+.main-btn{
+    background-color: var(--dark-color);
+}
+.navbar li a{
+    color: white;
+    font-size: 1.1rem;
+    transition: 0.5s;
+    justify-content: center;
+}
+.links{
+    position: absolute;
+    right: 0;
+}
+@media (max-width:991px) {
+    .links{
+        display: none;
+    }
+
+    .links_container {
+        width: 100%;
+    background-color: #fff;
+    display: block;
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    z-index: 2;
+    }
+    
+    .links_container  li {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    }
+
+    .links_container::after{
+    content: "";
+    position: absolute;
+    border-color: transparent transparent #fff transparent;
+    border-width: 10px;
+    border-style: solid;
+    top: -20px;
+    right: 3px;   
+    z-index: 2;
+ }
+
+    .navbar li a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+    }
+
+}
+  
+/* begin home page */
+.landing {
+    position: relative;
+    background-image: url('../images/homepage.jpg');
+    min-height: 60vh;
+  }
+  .landing .container { 
+    height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+  @media (max-width: 991px) {
+    .landing .text {
+      text-align: center;
+    }
+  }
+  .home-box {
+    position: relative;
+  }
+  .home-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(255 255 255 / 90%);
+  }
+  .home-box .container {  
+    width: 100%;
+    position: absolute;
+    top: -50px;
+    display: flex;
+    justify-content: center;
+  }
+  .home-box .box {
+    display: flex;
+    margin: 15px;
+    background-color: white;
+    padding: 10px 15px;
+    text-align: center;
+    transition: var(--main-transition);
+    /* border: 1px solid var(--main-color); */
+  }
+  .home-box .box::before,
+  .home-box .box::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: var(--main-color);
+    transition: 0.8s;
+  }
+  .home-box .box::before {
+    top: 0;
+    left: 0;
+  }
+  .home-box .box::after {
+    bottom: 0;
+    right: 0;
+  }
+  .home-box .box:hover::before,
+  .home-box .box:hover::after {
+    height: 100%;
+  }
+  .home-box .box:hover {
+    opacity: 1;
+  }
+  .home-box .box i {
+    font-size: 30px;
+    color: #cec5c5;
+  }
+  .home-box .box .text {
+    display: block;
+    color: var(--main-color);
+    font-style: italic;
+    font-weight: bold;
+    width: 100px;
+  }
+/* end home */
+
+.doctor{
+    background-color: #dfe1e6;
+    min-height: 100vh;
+}
+.doctor_list  {
+    list-style: none;
+    
+    
+
+}
+.doctor_list  li{ 
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px  7px ;
+    
+    
+}
+.doctor .chose li.active{
+    border-bottom: 2px solid  var(--dark-color);
+}
+.doctor .chose li:hover{
+    border-bottom: 2px solid  var(--dark-color);
+    color: var(--dark-color) ;
+}
+.doctor img{
+   width: 700px;
+}
+.doctor span{
+    width: 90% ;
+    background-color: #000;
+    height: 1px;
+   display: flex;
+  margin: auto;
+}
+.facebook{
+    background-color: rgb(24, 119, 242);
+}
+.twitter {
+    background-color: rgb(29, 161, 242);
+}
+.link{
+    background-color: rgb(0, 119, 181);
+}
+.youtube{
+    background-color: red;
+}
+.instagram{
+    background-color: var(--green-color);
+}
+.design-doctor li{
+    cursor: pointer;
+}
+.design-doctor img{
+    height: 300px;
+    
+   
+}
+.footer{
+    background-color: white;
+    max-height: 100vh;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.footer .doc .first{
+    color: var(--dark-color);
+}
+.follow li{
+    cursor: pointer;
+}
