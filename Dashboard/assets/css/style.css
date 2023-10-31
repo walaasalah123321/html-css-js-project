@@ -412,20 +412,17 @@ color: var(--white);
         left: -100%;
         z-index: 10000;
     }
-    .navigator.active{
+    .navigator.active ,.main.active{
         width: 100%;
         left: 0;
     }
-    .toggle{
-       
-        z-index: 200000;
-        
-    }
+   
     .main.active .toggle{
         position: fixed;
         color: var(--white);
         right: 0;
-        left: initial;
+        z-index: 100000;
+        
     }
 
 
