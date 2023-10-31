@@ -1,0 +1,433 @@
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --blue:#2a2185;
+    --white:#fff;
+    --gary:#f5f5f5;
+    --black1:#222;
+    --black2:#999;
+
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigator{
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    background-color: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigator ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+} 
+.navigator  ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+
+} 
+
+.navigator ul li:nth-child(1){
+   margin-bottom: 40px;
+   pointer-events: none;
+} 
+.navigator  ul li a{
+    color: var(--white);
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    width: 100%;
+
+}
+.navigator ul li:hover a , .navigator ul li.hovered a{
+    color: var(--blue);
+}
+.navigator ul li:hover , 
+.navigator ul li.hovered {
+    background-color: var(--white);
+} 
+
+.navigator ul li .icon{
+
+min-width: 60px;
+line-height: 60px;
+text-align: center;
+}
+.navigator.active{
+ width: 80px;
+}
+.navigator ul li .title{
+   
+    line-height: 60px;
+    padding: 0px 10px;
+}
+.navigator ul li:hover a::before , .navigator ul li.hovered a::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 35px 35px 0px 10px var(--white);
+    transition: 0.5s;
+}
+.navigator ul li:hover a::after,
+.navigator ul li.hovered a::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom:  -50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 35px -35px 0px 10px var(--white);
+    transition: 0.5s;
+}
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    background-color: var(--white);
+    transition: 0.5s;
+    height: 100vh;
+
+}
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+.topar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.toggle{
+    font-size: 38px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search{
+    position: relative;;
+    width: 400px;
+    margin: 0 10px;
+}  
+.search label{
+    position: relative;;
+    width: 100%;
+}
+.search input{
+    height: 40px;
+
+    width: 100%;
+    border: 1px solid var(--black2);
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2);
+}
+.search ion-icon{
+    position: absolute;
+    left: 10px;
+    top: 0;
+    font-size: 20px;
+}
+
+.topar .user{
+    position: relative;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+.cardbox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+}
+.cardbox .card{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0px 7px 25px  rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.cardbox .card .number{
+    color: var(--blue);
+    font-weight: 500px;
+    font-size: 30px;
+
+}
+.cardbox .card .cardname{
+    color: var(--black2);
+    font-size: 17px;
+    margin-top: 5px;
+}
+.cardbox .card ion-icon{
+    font-size: 50px;
+    color: var(--black2);
+
+}
+
+.cardbox .card:hover {
+    background-color: var(--blue);
+}
+.cardbox .card:hover .number,
+.cardbox .card:hover ion-icon,
+.cardbox .card:hover .cardname{
+    color: var(--white);
+
+}.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    
+}
+.details .order {
+    overflow: hidden;
+    position: relative;
+    background-color: var(--white);
+    box-shadow: 0px 7px 25px  rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    min-height: 450px;
+    display: grid;
+    padding: 20px;
+
+}
+
+ .cardheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    color: var(--blue);
+}
+.order .cardheader .btn{
+    background-color: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    padding: 5px 10px ;
+    border-radius: 10px;
+}
+.details .order table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details table thead td{
+    font-weight: 600;
+
+}
+.details .order table  tr{
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details table  tr:last-child{
+    border-bottom: none;
+}
+.details .order table  tbody tr:hover{
+background-color: var(--blue);
+color: var(--white);
+}
+.details .order table  tr td{
+    padding: 10px;
+}
+.details .order table  tr td:last-child{
+    text-align: end;
+}
+.details .order table  tr td:nth-child(2){
+    text-align: end;
+}
+.details .order table  tr td:nth-child(3){
+    text-align: center;
+}
+.status.delivered{
+    padding: 2px 4px ;
+    background-color: #8de02c;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px ;
+    font-weight: 400;
+}
+.status.return{
+    padding: 2px 4px ;
+    background-color: red;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px ;
+    font-weight: 400;
+}
+.status.pending{
+    padding: 2px 4px ;
+    background-color: #e9b10a;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px ;
+    font-weight: 400;
+}
+.status.inProgress{
+    padding: 2px 4px ;
+    background-color: #1795ce;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px ;
+    font-weight: 400;
+}
+.recentcus {
+    position: relative;
+    background-color: var(--white);
+    box-shadow: 0px 7px 25px  rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    min-height: 450px;
+    display: grid;
+    padding: 20px;
+
+}
+ .imgbox{
+    position: relative;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.imgbox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+.recentcus table tr td{
+    padding: 12px 10px;
+}
+.recentcus table tr td h3{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+.recentcus table tr td span{
+    font-size: 14px;
+    color: var(--black2);
+   
+}
+.recentcus table tr:hover{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.recentcus table tr:hover td span{
+    color: var(--white);
+}
+
+/* for response */
+@media (max-width : 991px) {
+    .navigator{
+        left: -300px;
+    }
+    .navigator.active{
+        width: 300px;
+        left: 0;
+    }
+    .main{
+        width: 100%;
+        left: 0;        
+
+    }
+    .main.active{
+        left: 300px;
+    }
+    .cardbox{
+        grid-template-columns: repeat(2 ,1fr);
+    }
+    
+}
+@media (max-width : 768px) {
+    .details{
+        grid-template-columns:  1fr;
+    }
+    .details .order{
+        overflow : auto;
+    }
+    .status.inProgress{
+        white-space: nowrap;
+    }
+}
+@media (max-width : 480px) {
+    .cardbox{
+        grid-template-columns:1fr;
+    }
+    .cardheader h2{
+        font-size: 20px;
+    }
+    .navigator{
+        width: 100%;
+        left: -100%;
+        z-index: 10000;
+    }
+    .navigator.active{
+        width: 100%;
+        left: 0;
+    }
+    .toggle{
+       
+        z-index: 200000;
+        
+    }
+    .main.active .toggle{
+        position: fixed;
+        color: var(--white);
+        right: 0;
+        left: initial;
+    }
+
+
+ 
+}
